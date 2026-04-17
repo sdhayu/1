@@ -1,49 +1,118 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1c1c1c;
-    color: #fff;
-  }
-  
-  header {
-    background-color: #111;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2.5em;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
+    background-color: #05080a; /* Fundo escuro profundo */
+    color: white;
+}
+
+/* Navegação */
+header {
+    padding: 20px 5%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  nav a {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #c4b07b; /* Dourado Piltover */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-  }
-  
-  section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  h2 {
-    color: #b3ffb3;
-  }
-  
-  footer {
-    background-color: #111;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00fffc; /* Brilho Hextech */
+}
+
+/* Banner Hero */
+.hero {
+    height: 100 vh;
+    background: linear-gradient(rgba(0,0,0,0.5), #05080a), 
+                url('https://images.alphacoders.com/119/1191544.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 10px;
-    font-size: 0.9em;
-  }
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(0, 255, 252, 0.6);
+}
+
+/* Botão Hextech */
+.btn-hextech {
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid #c4b07b;
+    color: #c4b07b;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.4s;
+}
+
+.btn-hextech:hover {
+    background: #c4b07b;
+    color: #000;
+    box-shadow: 0 0 15px #c4b07b;
+}
+
+/* Cards de Personagem */
+.characters {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #101518;
+    padding: 20px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #00fffc;
+}
+
+.card-img {
+    height: 300px;
+    background-color: #222;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+    
